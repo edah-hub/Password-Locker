@@ -1,4 +1,6 @@
-class user:
+class User:
     '''
-    class
+    class that generates an instance of User
     '''
+    user_list = []
+    
