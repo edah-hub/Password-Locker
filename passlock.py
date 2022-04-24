@@ -42,4 +42,12 @@ class Credentials():
         for user in User.user_list:
             if (user.username == username and user.password == password):
                 x_user == user.username
-        return x_user    
+        return x_user  
+    
+    def __init__(self,account,userName, password):
+        """
+        method that defines user credentials to be stored
+        """
+        self.account = account
+        self.userName = userName
+        self.password = password  
