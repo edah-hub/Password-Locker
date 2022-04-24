@@ -137,7 +137,7 @@ def passlocker():
         if short_code == "cc":
             print("Create New Credential")
             print("."*20)
-            print("Account name ....")
+            print("Account name :")
             account = input().lower()
             print("Your Account username")
             userName = input()
@@ -167,9 +167,9 @@ def passlocker():
                     print('_'* 30)
                 print('*' * 30)
             else:
-                print("You don't have any credentials saved yet..........")
+                print("No credentials found:(")
         elif short_code == "fc":
-            print("Enter the Account Name you want to search for")
+            print("Please enter the Account Name you want to search for")
             search_name = input().lower()
             if find_credential(search_name):
                 search_credential = find_credential(search_name)
@@ -180,7 +180,7 @@ def passlocker():
             else:
                 print("The Credential does not exist")
                 print('\n')
-        elif short_code == "d":
+        elif short_code == "del":
             print("Enter the account name of the Credentials you want to delete")
             search_name = input().lower()
             if find_credential(search_name):
