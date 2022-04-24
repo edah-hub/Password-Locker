@@ -15,7 +15,7 @@ class User:
         '''
         A method that saves a new user instance into the user list
         '''
-        User.user_list.append(self)
+        User.user_list.append(self)  # Appending / adding new password by appending to out user_list[]
     
     # def display_user(self):
     @classmethod
