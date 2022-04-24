@@ -28,4 +28,7 @@ class User:
         '''
         User.user_list.remove(self) # Using the remove() method to delete the contact object from the user_list.
     
-        
+class Credentials():
+    '''
+    Create credentials class to help create new objects of credentials
+    '''       
