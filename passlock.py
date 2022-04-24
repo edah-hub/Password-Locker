@@ -1,3 +1,6 @@
+from requests import delete
+
+
 class User:
     '''
     class that generates an instance of User
@@ -26,7 +29,7 @@ class User:
         '''
         delete_account method deletes a  saved account from the list
         '''
-        User.user_list.remove(self) # Using the remove() method to delete the contact object from the user_list.
+        User.user_list.remove(self) # Using the remove() method to delete the user object from the user_list.
     
 class Credentials():
     '''
@@ -50,4 +53,26 @@ class Credentials():
         """
         self.account = account
         self.userName = userName
-        self.password = password  
+        self.password = password 
+        
+    def save_details(self):
+        '''
+        method to save new credentials to the credential lst
+        '''
+        Credentials.credentials_list.append(self) # Appending / adding new password by appending to out user_list[]
+        
+    def delete_details(self):
+        '''
+        method to delete existing credentials
+        '''
+        Credentials.credentials_list.remove(self)  # Using the remove() method to delete the user object from the user_list.
+        
+    @classmethod
+    def find_credential(cls, account):
+        '''
+        method that takes the account_name and return credentials that matches the account
+        '''
+        for credential in cls.credentials_list:
+            if credential.account == account:
+                return credential
+        
