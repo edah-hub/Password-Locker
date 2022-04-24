@@ -38,4 +38,8 @@ class Credentials():
         '''
         method to verify whether the user is in the user_list
         '''  
-            
+        x_user = ""
+        for user in User.user_list:
+            if (user.username == username and user.password == password):
+                x_user == user.username
+        return x_user    
