@@ -157,15 +157,15 @@ def copy_password(account):
 
 def passlocker():
     print(
-        "Hello there Welcome to Password Locker...\n Please select one of the short codes below to proceed:\n NA ---  Create New Account  \n LG ---  LogIn  \n"
+        "Hello there Welcome to Password Locker...\n Please select one of the short codes below to proceed:\n NA --->  To Create New Account  \n LG --->  To LogIn  \n"
     )
     short_code = input("").lower().strip()
     if short_code == "na":
-        print("Sign Up")
+        print("Sign Up Here:")
         print("*" * 50)
         username = input("User_name: ")
         while True:
-            print(" TP - To type your own pasword:\n GP - To generate random Password")
+            print(" TP --> To type your own pasword:\n GP --> To generate random Password")
             password_Choice = input().lower().strip()
             if password_Choice == "tp":
                 password = input("Enter Password\n")
@@ -237,7 +237,7 @@ def passlocker():
             else:
                 print("No credentials found:(")
         elif short_code == "fc":
-            print("Please enter the Account Name you want to search for")
+            print("Please enter the Account Name you are searching for:")
             search_name = input().lower()
             if find_credential(search_name):
                 search_credential = find_credential(search_name)
