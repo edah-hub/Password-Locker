@@ -122,7 +122,7 @@ def delete_credential(credentials):
     Function to delete a Credentials from credentials list
 
     """
-    credentials.delete_details()
+    credentials.delete_credentials()
 
 
 def find_credential(account):
@@ -132,7 +132,7 @@ def find_credential(account):
     return Credentials.find_credential(account)
 
 
-def check_credendtials(account):
+def check_credentials(account):
     """
     Function that check if a Credentials exists with that account name and return true or false
 
@@ -256,7 +256,7 @@ def passlocker():
             if find_credential(search_name):
                 search_credential = find_credential(search_name)
                 print("_" * 50)
-                search_credential.delete_details()
+                search_credential.delete_credentials()
                 print("\n")
                 print(
                     f"Your credentials for : {search_credential.account} has been deleted successfully"

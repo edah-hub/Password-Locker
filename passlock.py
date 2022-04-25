@@ -74,7 +74,7 @@ class Credentials:
             self
         )  # Appending / adding new password by appending to out user_list[]
 
-    def delete_details(self):
+    def delete_credentials(self):
         """
         method to delete existing credentials
         """
@@ -182,7 +182,7 @@ class Credentials:
         Function to delete a Credentials from credentials list
 
         """
-        credentials.delete_details()
+        credentials.delete_credentials()
 
     def find_credential(account):
         """
