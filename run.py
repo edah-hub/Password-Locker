@@ -193,7 +193,7 @@ def passlocker():
             print("\n")
     while True:
         print(
-            "Use these short codes:\n CC - Create a new credential \n DC - Display Credentials \n FC - Find a credential \n GP - Generate A randomn password \n D - Delete credential \n EX - Exit the application \n"
+            "Use these short codes:\n CC - Create a new credential \n DC - Display Credentials \n FC - Find a credential \n GP - Generate A randomn password \n Del - Delete credential \n EX - Exit the application \n"
         )
         short_code = input().lower().strip()
         if short_code == "cc":
